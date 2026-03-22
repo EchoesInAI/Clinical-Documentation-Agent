@@ -30,7 +30,7 @@ User message
  Yes          No
   │            │
   ▼            ▼
-Execute    Final answer ✓
+Execute    Final answer 
   tool
   │
   ▼
