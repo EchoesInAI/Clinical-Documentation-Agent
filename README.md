@@ -20,14 +20,24 @@ A regular LLM call is a single round-trip: you send a prompt, you get a response
 
 ```
 User message
-    │
-    ▼
- LLM call ──► Tool call? ──Yes──► Execute tool ──► Append result to messages ──┐
-                 │                                                              │
-                No                                                   ◄──────────┘
-                 │
-                 ▼
-          Final answer ✓
+        │
+        ▼
+    LLM call
+        │
+        ▼
+   Tool call?
+   /        \
+ Yes          No
+  │            │
+  ▼            ▼
+Execute    Final answer ✓
+  tool
+  │
+  ▼
+Append result
+to messages
+  │
+  └──────────────► LLM call (loop back)
 ```
 
 ## Tech stack
